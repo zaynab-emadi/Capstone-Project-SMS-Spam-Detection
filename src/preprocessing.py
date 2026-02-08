@@ -73,7 +73,7 @@ class DataPreprocessor:
         text = re.sub(r"http\S+|www\s+|https\s+", "", text)
 
         #Remove email addresses
-        text = re.sub(r'^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$', '', text)
+        text = re.sub(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', '', text)
 
         # Remove phone numbers
         text = re.sub(r'^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$', '', text)
